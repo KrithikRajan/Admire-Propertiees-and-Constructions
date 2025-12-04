@@ -658,13 +658,84 @@ ol {
    13. FOOTER
 -------------------------------------------------- */
 
-footer {
-  background: #ffffff;
-  color: #555555;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+/* -------------------- FOOTER -------------------- */
+.main-footer {
+  background: #111;
+  color: #fff;
+  padding: 4rem 2rem 2rem;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #bbb;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo img {
+  width: 180px;
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
   text-align: center;
-  padding: 1.4rem 1rem 1.6rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+  color: #aaa;
   font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    margin: 0 auto 1rem;
+  }
 }
 
 /* --------------------------------------------------
