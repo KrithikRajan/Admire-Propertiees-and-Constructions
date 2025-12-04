@@ -658,7 +658,6 @@ ol {
    13. FOOTER
 -------------------------------------------------- */
 
-/* -------------------- FOOTER -------------------- */
 .main-footer {
   background: #111;
   color: #fff;
@@ -735,6 +734,117 @@ ol {
 
   .footer-logo img {
     margin: 0 auto 1rem;
+  }
+}
+
+/* ------------------- CALLBACK SECTION ------------------- */
+.callback-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom right, #d7f1ff, #b2e8f5);
+}
+
+.callback-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/* LEFT SIDE */
+.callback-left h2 {
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.callback-left p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.callback-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.callback-icon-box {
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #222;
+  gap: 0.8rem;
+}
+
+.icon-circle {
+  background: #0c3d73;
+  color: #fff;
+  padding: 0.6rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+/* RIGHT SIDE FORM */
+.callback-right {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(0,0,0,0.15);
+}
+
+.callback-form label {
+  display: block;
+  margin: 0.5rem 0 0.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.callback-form input,
+.callback-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.callback-form input:focus,
+.callback-form textarea:focus {
+  outline: none;
+  border-color: #0c3d73;
+  box-shadow: 0 0 6px rgba(12,61,115,0.3);
+}
+
+.callback-form button {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  background: #0c3d73;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.callback-form button:hover {
+  background: #092e56;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .callback-container {
+    grid-template-columns: 1fr;
+  }
+  .callback-left {
+    text-align: center;
   }
 }
 
