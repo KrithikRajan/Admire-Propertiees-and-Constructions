@@ -3,41 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admire Propertiees and Constructions</title>
+  <title>Admire Propertiees & Constructions</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Particle Canvas -->
-  <canvas id="particleCanvas"></canvas>
+  <!-- HOME Anchor -->
+  <div id="home"></div>
 
   <!-- Navbar -->
-  <nav>
-    <div class="logo">
+  <nav class="clean-nav">
+    <div class="nav-logo">
       <img src="Admire_Logo.jpg" alt="Logo">
     </div>
-    <div class="nav-links">
-      <a href="#sites">Sites</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
+
+    <ul class="nav-menu">
+      <li><a href="#home" class="active">HOME</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#ongoing-projects">ON GOING PROJECTS</a></li>
+      <li><a href="#completed-projects">COMPLETED PROJECTS</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
   </nav>
 
-  <!-- Hero / Intro -->
-  <header>
-    <div class="hero-content">
-      <h1>Admire Propertiees and Constructions</h1>
-      <p>Added asset to your life....</p>
-    </div>
-  </header>
+  <!-- Hero Section -->
+<header class="hero-section">
+  <video autoplay loop muted playsinline id="bg-video">
+    <source src="Intro_Video.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>ADMIRE PROPERTIEES & CONSTRUCTIONS</h1>
+    <p>Added asset to your life....</p>
+  </div>
+</header>
+
 
   <main>
-    <!-- Sites Section -->
-    <section id="sites" class="section">
-  <h2 class="highlight-orange">Our Projects</h2>
+<!-- VIDEO SECTION -->
+<section id="project-video" class="section video-section">
+  <h2 class="section-title">🔥 Current Trending Project</h2>
 
-  <h3 class="highlight-orange">Completed Projects</h3>
+  <div class="video-frame-container">
+    <video controls class="video-frame">
+      <source src="Intro_Video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+</section>
+
+    <!-- SITES SECTION -->
+    <section id="sites" class="section">
+
+      <!-- Ongoing Projects FIRST -->
+      <h2 class="section-title" id="ongoing-projects">Ongoing Projects</h2>
+
+      <div class="cards">
+        <div class="card" onclick="openProjectModal('colorcity')">
+          <img src="Color_City.jpg" alt="Color City">
+          <div class="card-info"><h4>Color City</h4></div>
+        </div>
+        <div class="card" onclick="openProjectModal('kowsalya3')">
+          <img src="KN-III-1.png" alt="Kowsalya Nagar Phase 3">
+          <div class="card-info"><h4>Kousalya Nagar Phase III</h4></div>
+        </div>
+        <div class="card" onclick="openProjectModal('guru_raghavendra')">
+          <img src="Guru Raghavendra Enclave_Coimbatore.png" alt="Guru Raghavendra Enclave">
+          <div class="card-info"><h4>Guru Raghavendra Enclave</h4></div>
+        </div>
+      </div>
+
+      <!-- Completed Projects SECOND -->
+      <h2 class="section-title" id="completed-projects">Completed Projects</h2>
+
       <div class="cards">
         <div class="card" onclick="openProjectModal('kowsalya1')">
           <img src="KN-I.png" alt="Kousalya Nagar Phase 1">
@@ -57,73 +98,53 @@
         </div>
       </div>
 
-  <h3 class="highlight-orange"><br><br>Ongoing Projects</h3>
-      <div class="cards">
-        <div class="card" onclick="openProjectModal('colorcity')">
-          <img src="Color_City.png" alt="Color City">
-          <div class="card-info"><h4>Color City</h4></div>
-        </div>
-        <div class="card" onclick="openProjectModal('kowsalya3')">
-          <img src="KN-III-1.png" alt="Kowsalya Nagar Phase 3">
-          <div class="card-info"><h4>Kousalya Nagar Phase III</h4></div>
-        </div>
-        <div class="card" onclick="openProjectModal('guru_raghavendra')">
-          <img src="Guru Raghavendra Enclave_Coimbatore.png" alt="Guru Raghavendra Enclave">
-          <div class="card-info"><h4>Guru Raghavendra Enclave</h4></div>
-        </div>
-      </div>
     </section>
 
-    <!-- About -->
+    <!-- About Section -->
     <section id="about" class="section">
       <div class="info-card about-card">
-        <h2>About Us</h2>
-        <div class="about-profile">
-          <img src="Varatha_Img.jpg" alt="VarathaRajan G" class="about-profile-img">
-          <div class="about-profile-texts">
-            <div class="about-profile-name">VarathaRajan G</div>
-            <div class="about-profile-designation">Founder & Managing Director</div>
-          </div>
-        </div>
-        <div class="about-content">
-          <p>A passion for quality and a commitment to customer satisfaction, he has built a legacy of delivering high-quality residential projects. Under his leadership, Admire Properties & Constructions is known for its timely delivery, excellent construction standards, and a customer-first approach that has earned the trust of more than 700+ families.</p>
-        </div>
+        <h2 class="section-title">About Us</h2>
+
+        <p class="about-content">
+          A passion for quality and a commitment to customer satisfaction, he has built a legacy of delivering 
+          high-quality residential projects. Admire Propertiees & Constructions is known for timely delivery, 
+          excellent construction standards, and a customer-first approach trusted by over 700 families.
+        </p>
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Section -->
     <section id="contact" class="section">
       <div class="info-card">
-        <h2>Contact Us</h2>
+        <h2 class="section-title">Contact Us</h2>
+
         <div class="contact-wrapper">
-          <div class="contact-details" style="font-size:1.1rem;line-height:2;">
+          <div class="contact-details">
             <strong>Name:</strong> VARATHARAJAN G<br>
-            <strong>Email:</strong> <a href="mailto:vj.varatharajan@gmail.com">vj.varatharajan@gmail.com</a><br>
-            <strong>Phone No:</strong> <a href="tel:9962225799">9962225799</a> / <a href="tel:7299961212">7299961212</a>
+            <strong>Email:</strong> <a href="mailto:info@admirepc.com">info@admirepc.com</a><br>
+            <strong>Phone No:</strong> <a href="tel:7299961212">7299961212</a><br>
+            <strong>Office No:</strong> <a href="tel:8870729994">8870729994</a><br>
+            <strong>Landline No:</strong> <a href="tel:04362474649">04362474649</a>
           </div>
 
-          <!-- Main Office Map -->
-          <div class="map" style="margin-bottom:1.5rem;">
+          <div class="map">
             <strong>Main Office: Chennai</strong><br>
-            <iframe 
-              src="https://www.google.com/maps?q=Joy+Homes,+Varadharajapuram,+Tamil+Nadu+600048&output=embed" 
-              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            <iframe src="https://www.google.com/maps?q=Joy+Homes,+Varadharajapuram,+Tamil+Nadu+600048&output=embed"
+              width="100%" height="250" style="border:0;"></iframe>
           </div>
-          <!-- Branch Office Map -->
+
           <div class="map">
             <strong>Branch Office: Thanjavur</strong><br>
-            <iframe 
-              src="https://www.google.com/maps?q=NK+Rd,+Tamil+Nadu&output=embed" 
-              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            <iframe src="https://www.google.com/maps?q=P4X5+7RC+Admire+Propertiees+and+Constructions+Thanjavur&output=embed"
+              width="100%" height="250" style="border:0;"></iframe>
           </div>
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- Project Modal -->
+  <!-- Modal -->
   <div id="projectModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeProjectModal()">&times;</span>
@@ -132,12 +153,11 @@
     </div>
   </div>
 
-  <!-- Lightbox for Brochure/Image -->
+  <!-- Lightbox -->
   <div id="lightbox"></div>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Admire Properties & Constructions. All Rights Reserved.</p>
+    © 2025 Admire Propertiees & Constructions. All Rights Reserved.
   </footer>
 
   <script src="script.js"></script>
