@@ -32,8 +32,8 @@ const projects = {
   colorcity: {
     title: "Color City",
     cards: [
-      { type: "image", src: "Color_City.png", text: "Brochure" },
-      { type: "pdf", src: "admire color city_PDF.pdf", text: "Project Brochure" },
+      { type: "image", src: "Color_City.jpg", text: "Brochure" },
+      { type: "pdf", src: "Color_City.pdf", text: "Project Brochure" },
   { type: "map", src: "https://www.google.com/maps?q=10.7067742,79.0285205&output=embed", text: "Site Map" }
     ]
   },
